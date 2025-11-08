@@ -1,0 +1,95 @@
+%=============================================================
+% Lab 5
+% Student: Мохаммадхоссейн Фарзанфар
+% Course: Компьютерный практикум по научному письму
+%=============================================================
+
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[russian,english]{babel}
+\usepackage{booktabs}
+\usepackage{siunitx}
+\usepackage{geometry}
+\geometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+
+\title{\textbf{Lab 5: Exercises 5.14 }\\
+	{\Large \selectlanguage{russian} Компьютерный практикум по научному письму}}
+\author{\selectlanguage{russian} Мохаммадхоссейн Фарзанфар}
+\date{\today}
+
+\begin{document}
+	
+	\maketitle
+	\selectlanguage{english}
+	
+	\section*{5.14 Exercises (p. 65)}
+	
+	\subsubsection*{1. Simple table example}
+	\begin{center}
+		\begin{tabular}{lll}
+			\toprule
+			Animal & Food & Size \\
+			\midrule
+			dog & meat & medium \\
+			horse & hay & large \\
+			frog & flies & small \\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	
+	\subsubsection*{2. Different alignments: l, c, r}
+	\begin{tabular}{l c r}
+		\toprule
+		Left aligned & Centered & Right aligned \\
+		\midrule
+		Apple & Banana & Cherry \\
+		Dog & Cat & Bird \\
+		\bottomrule
+	\end{tabular}
+	
+	\subsubsection*{3. Testing table structure}
+	\textbf{Correct table:}
+	\begin{tabular}{ccc}
+		A & B & C \\
+		X & Y & Z \\
+	\end{tabular}
+	
+	\textbf{Too few items (error):}
+	\begin{verbatim}
+		% \begin{tabular}{ccc}
+			%   A & B & C \\
+			%   X & Y     % Missing third element
+			% \end{tabular}
+	\end{verbatim}
+	
+	\textbf{Too many items (error):}
+	\begin{verbatim}
+		% \begin{tabular}{cc}
+			%   1 & 2 & 3 & 4  % Too many elements
+			% \end{tabular}
+	\end{verbatim}
+	
+	\subsubsection*{4. Multicolumn spanning}
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		\multicolumn{2}{|c|}{Span 2} & Normal & Normal \\
+		\hline
+		A & B & \multicolumn{2}{c|}{Span 2 right} \\
+		\hline
+		\multicolumn{4}{|c|}{Span all 4 columns} \\
+		\hline
+	\end{tabular}
+	
+	\subsubsection*{5. Professional table with booktabs}
+	\begin{tabular}{l S[table-format=2.1] S[table-format=2.1]}
+		\toprule
+		Student & {Test 1} & {Test 2} \\
+		\midrule
+		Alice & 85.5 & 92.0 \\
+		Bob & 78.0 & 81.5 \\
+		Charlie & 92.5 & 88.0 \\
+		\bottomrule
+	\end{tabular}
+	
+\end{document}
