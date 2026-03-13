@@ -1,0 +1,43 @@
+
+% Header (custom, since beamerposter starts from center)
+\begin{columns}
+\begin{column}{1\textwidth}
+\color{BlueViolet}\centering \VeryHuge A Brief Introduction to LaTeX for Scientific Writing \vspace{0.5cm} \\
+\Large Mohammadhossein Farzanfar \quad RUDN University \vspace{1cm}
+\end{column}
+\end{columns}
+
+\begin{columns}
+\begin{column}{.33\textwidth}
+\begin{block}{Why LaTeX?}
+LaTeX handles complex math and structures better than Word. \\
+\color{BlueViolet}Example: \color{Black} Sections with \verb|\section{}|.
+\end{block}
+
+\begin{block}{Math Example}
+A set: $Z = \{\text{cow}, \text{pig}, \text{elephant}\}$. \\
+Natural numbers: $\mathbb{N} = \{1,2,3,\ldots\}$.
+\end{block}
+\end{column}
+
+\begin{column}{.33\textwidth}
+\begin{block}{Derivative Example}
+Product rule: $f(x) = x^2 \sin(x)$ \\
+$f'(x) = 2x \sin(x) + x^2 \cos(x)$.
+\end{block}
+
+\begin{center}
+\includegraphics[width=0.8\columnwidth]{logo.jpg}  % If logo.jpg doesn't exist, comment this out or replace with a real file
+\captionof{figure}{Example Diagram}
+\end{center}
+\end{column}
+
+\begin{column}{.33\textwidth}
+\begin{block}{Tips}
+- Use pictures over text.
+- Examples before definitions.
+- Keep presentations short.
+\end{block}
+\end{column}
+\end{columns}
+
