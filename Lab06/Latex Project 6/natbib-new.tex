@@ -1,0 +1,21 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{natbib}
+\usepackage{hyperref}
+\author{Mohammadhossein Farzanfar}
+\title{Lab 6: Bibliography Example with natbib}
+
+\begin{document}
+New reference to the PDF guide added: \citet{Kulyabov2023}.
+\maketitle
+This guide is from \citet{Kulyabov2023}. The mathematics showcase is from \citet{Graham1995}, whereas there is some chemistry in \citet{Thomas2008}.
+
+Some parenthetical citations: \citep{Kulyabov2023} and then \citep[p.~56]{Thomas2008}.
+
+\citep[See][pp.~45--48]{Graham1995}
+
+Together \citep{Kulyabov2023,Graham1995,Thomas2008}
+
+\bibliographystyle{plainnat}
+\bibliography{learnlatex}
+\end{document}

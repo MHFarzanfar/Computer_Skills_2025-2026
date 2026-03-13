@@ -1,0 +1,57 @@
+This is BibTeX, Version 0.99d (TeX Live 2025/dev/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: natbib-example.aux
+The style file: plainnat.bst
+Database file #1: learnlatex.bib
+Illegal end of database file---line 19 of file learnlatex.bib
+ :   author = {Ronald L. Graham and Donald E. Knuth and O
+ :                                                       
+I'm skipping whatever remains of this entry
+Warning--to sort, need author, editor, or key in Graham1995
+Warning--empty author and editor in Graham1995
+Warning--empty title in Graham1995
+Warning--empty publisher in Graham1995
+Warning--empty year in Graham1995
+Warning--empty year in Graham1995
+You've used 3 entries,
+            2773 wiz_defined-function locations,
+            611 strings with 5389 characters,
+and the built_in function-call counts, 1276 in all, are:
+= -- 98
+> -- 69
+< -- 0
++ -- 24
+- -- 21
+* -- 119
+:= -- 185
+add.period$ -- 9
+call.type$ -- 3
+change.case$ -- 14
+chr.to.int$ -- 3
+cite$ -- 13
+duplicate$ -- 64
+empty$ -- 117
+format.name$ -- 23
+if$ -- 262
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 4
+newline$ -- 23
+num.names$ -- 8
+pop$ -- 45
+preamble$ -- 1
+purify$ -- 13
+quote$ -- 0
+skip$ -- 42
+stack$ -- 0
+substring$ -- 34
+swap$ -- 2
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 23
+warning$ -- 6
+while$ -- 7
+width$ -- 0
+write$ -- 42
+(There was 1 error message)

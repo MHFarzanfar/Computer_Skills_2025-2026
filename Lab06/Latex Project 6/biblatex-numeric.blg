@@ -1,0 +1,11 @@
+[0] Config.pm:308> INFO - This is Biber 2.20
+[1] Config.pm:311> INFO - Logfile is 'biblatex-numeric.blg'
+[69] biber:340> INFO - === Sat Nov 22, 2025, 14:48:39
+[83] Biber.pm:420> INFO - Reading 'biblatex-numeric.bcf'
+[134] Biber.pm:994> INFO - Found 3 citekeys in bib section 0
+[147] Biber.pm:4463> INFO - Processing section 0
+[156] Biber.pm:4654> INFO - Looking for bibtex file 'learnlatex.bib' for section 0
+[157] bibtex.pm:1713> INFO - LaTeX decoding ...
+[160] bibtex.pm:1519> INFO - Found BibTeX data source 'learnlatex.bib'
+[193] Utils.pm:399> ERROR - BibTeX subsystem: /tmp/biber_tmp_K7uJ/8eb2f97fe59f67da4ccd5eabd2366410_28478.utf8, line 20, syntax error: at end of input, expected one of: number, name (entry type, key, field, or macro name) or quoted string ({...} or "...")
+[193] Biber.pm:136> INFO - ERRORS: 1
