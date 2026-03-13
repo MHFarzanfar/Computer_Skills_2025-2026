@@ -1,0 +1,149 @@
+<div id="цель-работы" class="slide section level1">
+<h1>Цель работы</h1>
+<p>Освоить работу с таблицами в LaTeX: создание базовых таблиц,
+использование различных выравниваний, объединение ячеек, работа с
+пакетами <code>array</code>, <code>booktabs</code>,
+<code>siunitx</code>.</p>
+</div>
+<div id="задание" class="slide section level1">
+<h1>Задание</h1>
+<ol style="list-style-type: decimal">
+<li>Создать базовую таблицу</li>
+<li>Использовать различные выравнивания колонок (<code>l</code>,
+<code>c</code>, <code>r</code>)</li>
+<li>Протестировать структуру таблицы (слишком мало/много элементов)</li>
+<li>Экспериментировать с командой <code>\multicolumn</code> для
+объединения ячеек</li>
+<li>Создать профессиональную таблицу с использованием
+<code>booktabs</code></li>
+</ol>
+</div>
+<div id="теоретическая-часть" class="slide section level1">
+<h1>Теоретическая часть</h1>
+<h2 id="основные-пакеты-для-работы-с-таблицами">Основные пакеты для
+работы с таблицами</h2>
+<ul>
+<li><strong>array</strong> - расширенная функциональность для
+таблиц</li>
+<li><strong>booktabs</strong> - профессиональное оформление таблиц</li>
+<li><strong>siunitx</strong> - выравнивание числовых данных</li>
+</ul>
+<h2 id="команды-booktabs">Команды booktabs</h2>
+<ul>
+<li><code>\toprule</code> - верхняя линия таблицы</li>
+<li><code>\midrule</code> - средние разделители</li>
+<li><code>\bottomrule</code> - нижняя линия таблицы</li>
+<li><code>\cmidrule</code> - частичные горизонтальные линии</li>
+</ul>
+</div>
+<div id="выполнение-лабораторной-работы" class="slide section level1">
+<h1>Выполнение лабораторной работы</h1>
+<h2 id="создание-документа-и-кода">1. Создание документа и кода</h2>
+<p>Был создан файл <code>Lab5.tex</code> с реализацией всех упражнений
+из раздела 5.14.</p>
+<div class="float">
+<img src="image05/Code%20Task%201.jpg" style="width:70.0%"
+alt="Код задания 1" />
+<div class="figcaption">Код задания 1</div>
+</div>
+<div class="float">
+<img src="image05/Code%20Task%202.jpg" style="width:70.0%"
+alt="Код задания 2" />
+<div class="figcaption">Код задания 2</div>
+</div>
+<h2 id="компиляция-документа">2. Компиляция документа</h2>
+<p>Документ скомпилирован с помощью команды:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="ex">pdflatex</span> Lab5.tex</span></code></pre></div>
+<div class="float">
+<img src="image05/Compile%20and%20files.jpg" style="width:70.0%"
+alt="Процесс компиляции" />
+<div class="figcaption">Процесс компиляции</div>
+</div>
+<h2 id="результаты-выполнения-упражнений">3. Результаты выполнения
+упражнений</h2>
+<h3 id="упражнение-1-базовая-таблица">Упражнение 1: Базовая таблица</h3>
+<div class="float">
+<img src="image05/PDF%20Task%201.jpg" style="width:70.0%"
+alt="Результат задания 1" />
+<div class="figcaption">Результат задания 1</div>
+</div>
+<p><em>Рисунок 1: Базовая таблица с использованием booktabs</em></p>
+<p>Создана простая таблица с тремя колонками, использующая
+профессиональное оформление через пакет <code>booktabs</code>.</p>
+<h3 id="упражнение-2-различные-выравнивания-колонок">Упражнение 2:
+Различные выравнивания колонок</h3>
+<div class="float">
+<img src="image05/PDF%20Task%202.jpg" style="width:70.0%"
+alt="Результат задания 2" />
+<div class="figcaption">Результат задания 2</div>
+</div>
+<p><em>Рисунок 2: Таблица с разными типами выравнивания</em></p>
+<p>Продемонстрированы три типа выравнивания: - <code>l</code> -
+выравнивание по левому краю - <code>c</code> - выравнивание по центру -
+<code>r</code> - выравнивание по правому краю</p>
+<h3 id="упражнение-3-тестирование-структуры-таблицы">Упражнение 3:
+Тестирование структуры таблицы</h3>
+<p><strong>Слишком мало элементов:</strong></p>
+<pre><code> Вызывает ошибку компиляции
+ \begin{tabular}{ccc}
+ A &amp; B &amp; C \\
+ X &amp; Y      Отсутствует третий элемент
+ \end{tabular}</code></pre>
+<p><strong>Результат:</strong> LaTeX выдает ошибку “Extra alignment tab
+has been changed to <code>\cr</code>”</p>
+<p><strong>Слишком много элементов:</strong></p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode latex"><code class="sourceCode latex"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a> Вызывает ошибку компиляции  </span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a> <span class="kw">\begin</span>{<span class="ex">tabular</span>}{cc}</span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a> 1 <span class="op">&amp;</span> 2 <span class="op">&amp;</span> 3 <span class="op">&amp;</span> 4  <span class="co">% Слишком много элементов</span></span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a> <span class="kw">\end</span>{<span class="ex">tabular</span>}</span></code></pre></div>
+<p><strong>Результат:</strong> LaTeX выдает ошибку “Extra alignment tab
+has been changed to <code>\cr</code>”</p>
+<h3 id="упражнение-4-объединение-ячеек-с-multicolumn">Упражнение 4:
+Объединение ячеек с <code>\multicolumn</code></h3>
+<div class="float">
+<img src="image05/PDF%20Task%202.jpg" style="width:70.0%"
+alt="Результат задания 4" />
+<div class="figcaption">Результат задания 4</div>
+</div>
+<p><em>Рисунок 3: Объединение ячеек с помощью multicolumn</em></p>
+<p>Использована команда <code>\multicolumn</code> для: - Объединения
+двух колонок - Объединения всех четырех колонок - Центрирования
+содержимого объединенных ячеек</p>
+<h3 id="упражнение-5-профессиональная-таблица">Упражнение 5:
+Профессиональная таблица</h3>
+<div class="float">
+<img src="image05/PDF%20Task%202.jpg" style="width:70.0%"
+alt="Результат задания 5" />
+<div class="figcaption">Результат задания 5</div>
+</div>
+<p><em>Рисунок 4: Профессиональная таблица с числовыми данными</em></p>
+<p>Создана таблица с: - Чистым оформлением через <code>booktabs</code> -
+Числовыми данными, корректно выровненными - Отсутствием вертикальных
+линий для профессионального вида</p>
+</div>
+<div id="выводы" class="slide section level1">
+<h1>Выводы</h1>
+<p>В ходе лабораторной работы №5 были освоены следующие навыки:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Создание базовых таблиц</strong> в LaTeX с использованием
+окружения <code>tabular</code></li>
+<li><strong>Управление выравниванием</strong> колонок с помощью
+спецификаторов <code>l</code>, <code>c</code>, <code>r</code></li>
+<li><strong>Понимание структуры таблиц</strong> - важность соответствия
+количества элементов и объявленных колонок</li>
+<li><strong>Объединение ячеек</strong> с помощью команды
+<code>\multicolumn</code> для создания сложных табличных структур</li>
+<li><strong>Профессиональное оформление</strong> таблиц с использованием
+пакета <code>booktabs</code></li>
+<li><strong>Работа с числовыми данными</strong> и их корректное
+выравнивание</li>
+</ol>
+<p>Освоение работы с таблицами в LaTeX является важным навыком для
+подготовки научных публикаций и отчетов, так как таблицы широко
+используются для представления структурированных данных в академической
+среде. Пакет <code>booktabs</code> позволяет создавать эстетически
+приятные и профессионально выглядящие таблицы, соответствующие
+стандартам научных изданий.</p>
+</div>
