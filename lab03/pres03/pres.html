@@ -1,0 +1,118 @@
+<h2 id="цель-работы">Цель работы</h2>
+<p>Освоить набор математических формул в LaTeX, изучить математические
+режимы и работу с пакетами для математической верстки.</p>
+<h2 id="задание">Задание</h2>
+<ol type="1">
+<li>Изучить математические режимы LaTeX</li>
+<li>Освоить верхние и нижние индексы</li>
+<li>Изучить греческие буквы и функции</li>
+<li>Научиться работать с уравнениями и матрицами</li>
+<li>Выполнить практические упражнения</li>
+</ol>
+<h2 id="основные-математические-режимы">Основные математические
+режимы</h2>
+<p><strong>Два основных режима:</strong> - Инлайн-режим:
+<code>$y = mx + c$</code> - Дисплей-режим:
+<code>\[ y = mx + c \]</code></p>
+<figure>
+<img src="image_02.jpg" style="width:50.0%"
+alt="Пример математического кода" />
+<figcaption aria-hidden="true">Пример математического кода</figcaption>
+</figure>
+<h2 id="создание-основного-документа">Создание основного документа</h2>
+<p>Создал файл <code>math-practice.tex</code> с математическими
+конструкциями:</p>
+<ul>
+<li>Верхние и нижние индексы</li>
+<li>Греческие буквы</li>
+<li>Интегралы и уравнения</li>
+<li>Матрицы и шрифты</li>
+</ul>
+<figure>
+<img src="image_01.jpg" style="width:50.0%" alt="Процесс компиляции" />
+<figcaption aria-hidden="true">Процесс компиляции</figcaption>
+</figure>
+<h2 id="компиляция-документа">Компиляция документа</h2>
+<p>Процесс компиляции основного документа:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pdflatex</span> math-practice.tex</span></code></pre></div>
+<p>Результат - успешная компиляция без ошибок</p>
+<figure>
+<img src="image_03.jpg" style="width:70.0%"
+alt="Отладка математических формул" />
+<figcaption aria-hidden="true">Отладка математических
+формул</figcaption>
+</figure>
+<h2 id="практические-упражнения">Практические упражнения</h2>
+<p>Создал файл exercises.tex с 4 упражнениями:</p>
+<p>Сравнение инлайн и дисплей режимов</p>
+<p>Практика с греческими буквами</p>
+<p>Исследование шрифтов</p>
+<p>Опции документа</p>
+<figure>
+<img src="image_06.jpg" style="width:70.0%"
+alt="Исходный код документа с упражнениями" />
+<figcaption aria-hidden="true">Исходный код документа с
+упражнениями</figcaption>
+</figure>
+<h2 id="компиляция-упражнений">Компиляция упражнений</h2>
+<p>Выполнил компиляцию упражнений:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pdflatex</span> exercises.tex</span></code></pre></div>
+<figure>
+<img src="image_05.jpg" style="width:70.0%"
+alt="Процесс компиляции упражнений" />
+<figcaption aria-hidden="true">Процесс компиляции
+упражнений</figcaption>
+</figure>
+<h2 id="изученные-математические-элементы">Изученные математические
+элементы</h2>
+<p>Основные элементы:</p>
+<p>Верхние/нижние индексы: <span
+class="math inline"><em>x</em><sup>2</sup></span>, <span
+class="math inline"><em>a</em><sub><em>n</em></sub></span></p>
+<p>Греческие буквы: <span class="math inline"><em>α</em></span>, <span
+class="math inline"><em>β</em></span>, <span
+class="math inline"><em>Γ</em></span></p>
+<p>Функции: <span class="math inline">sin <em>θ</em></span>, <span
+class="math inline">log <em>x</em></span></p>
+<p>Интегралы: <span
+class="math inline">∫<em>e</em><sup>−<em>x</em><sup>2</sup></sup><em>d</em><em>x</em></span></p>
+<p>Матрицы: pmatrix, bmatrix</p>
+<p>Шрифты: , , </p>
+<figure>
+<img src="image_07.jpg" style="width:70.0%"
+alt="Альтернативная версия кода упражнений" />
+<figcaption aria-hidden="true">Альтернативная версия кода
+упражнений</figcaption>
+</figure>
+<h2 id="специальные-математические-команды">Специальные математические
+команды</h2>
+<p>Изученные команды:</p>
+<p> - дроби</p>
+<p>, - суммы и произведения</p>
+<p>, - пределы и интегралы</p>
+<p>\begin{align*} - выровненные уравнения</p>
+<p>\begin{pmatrix} - матрицы</p>
+<p>, - математические шрифты</p>
+<h2 id="результаты-работы">Результаты работы</h2>
+<p>Достигнутые результаты:</p>
+<p>Успешная компиляция обоих документов</p>
+<p>Освоены все математические режимы</p>
+<p>Изучены греческие буквы и функции</p>
+<p>Практика с матрицами и уравнениями</p>
+<p>Выполнены все 4 упражнения</p>
+<figure>
+<img src="image_04.jpg" style="width:70.0%"
+alt="Исходный код основного документа - попытка 2" />
+<figcaption aria-hidden="true">Исходный код основного документа -
+попытка 2</figcaption>
+</figure>
+<h2 id="выводы">Выводы</h2>
+<p>В ходе лабораторной работы №3:</p>
+<p>Освоены математические режимы LaTeX</p>
+<p>Изучены команды для сложных формул</p>
+<p>Практически применены знания</p>
+<p>Успешно созданы документы с математикой</p>
+<p>Получены навыки работы с пакетом amsmath</p>
+<p>Система LaTeX доказала свою эффективность для научных публикаций.</p>
