@@ -1,0 +1,109 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}     
+\usepackage{lipsum}       
+\usepackage{float}        
+\usepackage[hidelinks]{hyperref} 
+
+\title{Including Graphics in LaTeX — Exercises}
+\author{Mohammadhossein Farzanfar}
+\date{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Exercises on Including Graphics}
+
+\lipsum[1]
+
+% Task 1 (How to insert my image not using sample)
+\subsection*{Task 1 – Including your own image}
+Here we include your image file \texttt{windows-98.jpg}.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.5\textwidth]{windows-98.jpg}
+  \caption{My own image: Windows 98}
+  \label{fig:task1}
+\end{figure}
+
+\lipsum[2]
+
+% Task 2 (How to changing size, scale and rotation image)
+\subsection*{Task 2 – Exploring image size, scale, and rotation}
+The same image in different sizes, scales, and angles.
+
+\begin{center}
+\includegraphics[width=0.3\textwidth, angle=15]{windows-98.jpg}\\[1em]
+\includegraphics[height=3cm, scale=1.2]{windows-98.jpg}
+\end{center}
+
+\lipsum[3]
+
+% Task 3 (Here I want show difference between textwith and linewidth)
+\subsection*{Task 3 – Width relative to \textbackslash textwidth and \textbackslash linewidth}
+Below: the same image twice, once with width = 0.5\textbackslash textwidth, once = 0.5\textbackslash linewidth.
+
+\begin{center}
+\includegraphics[width=0.5\textwidth]{windows-98.jpg}\\
+\includegraphics[width=0.5\linewidth]{windows-98.jpg}
+\end{center}
+
+\lipsum[4]
+
+% Task 4 (Float using [h][t][b][p]
+\subsection*{Task 4 – Float positioning}
+Here we demonstrate float placement using [h], [t], [b], [p], and [H].
+
+\begin{fiSgure}[t]
+  \centering
+  \includegraphics[width=0.4\textwidth]{windows-98.jpg}
+  \caption{Float at top of page [t]}
+  \label{fig:top}
+\end{figure}
+
+\begin{figure}[b]
+  \centering
+  \includegraphics[width=0.4\textwidth]{windows-98.jpg}
+  \caption{Float at bottom [b]}
+  \label{fig:bottom}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.4\textwidth]{windows-98.jpg}
+  \caption{Float forced here [H]}
+  \label{fig:here}
+\end{figure}
+
+\lipsum[5-6]
+
+% Task 5 (showing We understand using caption before vs after label and ref)
+\subsection*{Task 5 – Label placement and referencing}
+Two figures: one correct, one incorrect label placement.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.4\textwidth]{windows-98.jpg}
+  \caption{Correct order (caption then label)}
+  \label{fig:right}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.4\textwidth]{windows-98.jpg}
+  \label{fig:wrong}
+  \caption{Wrong order (label before caption)}
+\end{figure}
+
+Now we reference them here:  
+Figure~\ref{fig:right} shows the correct numbering,  
+while Figure~\ref{fig:wrong} may show the wrong or repeated number.
+
+\lipsum[7-8]
+
+\end{document}
+
