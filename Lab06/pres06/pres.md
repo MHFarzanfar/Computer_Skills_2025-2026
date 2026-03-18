@@ -1,36 +1,19 @@
 ---
-# Front matter
 lang: ru-RU
 title: "Лабораторная работа №6"
 subtitle: "Работа с библиографией в LaTeX"
 author: "Мохаммадхоссейн Фарзанфар"
-institute: "РУДН, Москва, Россия"
-date: 22 ноября 2025
-
-# Formatting
-toc: true
-toc_depth: 2
-fontsize: 12pt
-linestretch: 1.5
-papersize: a4paper
-documentclass: scrreprt
-polyglossia-lang: russian
-polyglossia-otherlangs: english
-mainfont: PT Serif
-romanfont: PT Serif
-sansfont: PT Sans
-monofont: PT Mono
-mainfontoptions: Ligatures=TeX
-romanfontoptions: Ligatures=TeX
-sansfontoptions: Ligatures=TeX,Scale=MatchLowercase
-monofontoptions: Scale=MatchLowercase
-indent: true
+institute: "РУДН"
+date: "2026"
+theme: "Warsaw"
+mainfont: "PT Serif"
+sansfont: "PT Sans"
+monofont: "PT Mono"
 pdf-engine: lualatex
 header-includes:
-  - \usepackage{float}
-  - \floatplacement{figure}{H}
-  - \usepackage{booktabs}
-  - \usepackage{siunitx}
+  - \usepackage{polyglossia}
+  - \setmainlanguage{russian}
+  - \setotherlanguage{english}
 ---
 
 # Цель работы
@@ -70,41 +53,77 @@ BibTeX проще для базовых нужд, biblatex лучше для с�
 
 ## 1. Создание документа и кода
 
-Был создан файл `Lab6.tex` с реализацией всех упражнений из раздела 6.9.
+### Работа с natbib (Стили и цитаты)
 
-![Natbib alphabetic code](image06/natbib-example-code.jpg){ width=70% }
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+**Исходный код natbib**
+![Код natbib](image06/natbib-code.jpg){width=100%}
+:::
+::: {.column width="50%"}
+**Результат цитирования**
+![Результат natbib](image06/natbib-result.jpg){width=100%}
+:::
+::::::::::::::
 
-![Natbib alphabetic result](image06/natbib-example-result.jpg){ width=70% }
+### Использование Numeric стиля в natbib
 
-*Рисунок 1: Пример с natbib alphabetic*
+**Числовой стиль оформления ссылок**
+![Результат natbib numeric](image06/natbib-numeric-result.jpg){width=75%}
 
-![Natbib numeric code](image06/natbib-numeric-code.jpg){ width=70% }
+---
 
-![Natbib numeric result](image06/natbib-numeric-result.jpg){ width=70% }
+### Работа с пакетом biblatex
 
-*Рисунок 2: Пример с natbib numeric*
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+**Настройка biblatex**
+![Код biblatex](image06/biblatex-example-code.jpg){width=100%}
+:::
+::: {.column width="50%"}
+**Финальный PDF**
+![Результат biblatex](image06/biblatex-example-result.jpg){width=100%}
+:::
+::::::::::::::
 
-![Biblatex code](image06/biblatex-example-code.jpg){ width=70% }
+---
 
-![Biblatex result](image06/biblatex-example-result.jpg){ width=70% }
+### Обработка отсутствующих ссылок
 
-*Рисунок 3: Пример с biblatex*
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+**Несуществующий ключ**
+![Код ошибки](image06/natbib-fake-code.jpg){width=100%}
+:::
+::: {.column width="50%"}
+**Отображение в тексте**
+![Результат ошибки 1](image06/natbib-fake-result-1.jpg){width=100%}
+:::
+::::::::::::::
+\vspace{0.3cm}
+![Список литературы с ошибкой](image06/natbib-fake-result-2.jpg){width=60%}
 
-![Fake citation code](image06/natbib-fake-code.jpg){ width=70% }
+---
 
-![Fake citation result](image06/natbib-fake-result-1.jpg){ width=70% }
+### Добавление новой литературы в базу данных
 
-![Fake citation result](image06/natbib-fake-result-2.jpg){ width=70% }
+**Редактирование файла .bib**
+![Код новой записи](image06/natbib-new-code.jpg){width=85%}
 
-*Рисунок 4: Фальшивая цитата в natbib*
+---
 
-![New reference code](image06/natbib-new-code.jpg){ width=70% }
+### Результат добавления новой ссылки
 
-![New reference result](image06/natbib-new-result-1.jpg){ width=70% }
-
-![New reference result](image06/natbib-new-result-2.jpg){ width=70% }
-
-*Рисунок 5: Новая ссылка в natbib*
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+**Цитата в тексте**
+![Новая ссылка 1](image06/natbib-new-result-1.jpg){width=100%}
+:::
+::: {.column width="50%"}
+**Обновленный список**
+![Новая ссылка 2](image06/natbib-new-result-2.jpg){width=100%}
+:::
+::::::::::::::
 
 # Выводы
 
@@ -115,5 +134,5 @@ BibTeX проще для базовых нужд, biblatex лучше для с�
 3. **Рабочий процесс с biblatex** для гибкого цитирования.
 4. **Добавление и управление ссылками**, включая фальшивые и новые записи.
 5. **Эксперименты со стилями** для разных типов цитирования.
-
+\newpage
 Освоение работы с библиографией в LaTeX является важным навыком для подготовки научных публикаций и отчетов, так как ссылки широко используются для представления источников в академической среде. Пакеты natbib и biblatex позволяют создавать профессиональные библиографии, соответствующие стандартам научных изданий.

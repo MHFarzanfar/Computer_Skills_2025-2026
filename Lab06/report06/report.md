@@ -7,26 +7,39 @@ author: "Мохаммадхоссейн Фарзанфар"
 institute: "РУДН"
 
 # Formatting
+toc-title: "Содержание"
 toc: true
-toc-depth: 2
-numbersections: true
+toc_depth: 2
+lof: true
+lot: true
 fontsize: 12pt
 linestretch: 1.5
-papersize: a4
-documentclass: article
-geometry: "left=2cm,right=2cm,top=2cm,bottom=2cm"
-mainfont: "DejaVu Serif"
-sansfont: "DejaVu Sans"
-monofont: "DejaVu Sans Mono"
+papersize: a4paper
+documentclass: scrreprt
+polyglossia-lang: russian
+polyglossia-otherlangs: english
+mainfont: PT Serif
+romanfont: PT Serif
+sansfont: PT Sans
+monofont: PT Mono
+mainfontoptions: Ligatures=TeX
+romanfontoptions: Ligatures=TeX
+sansfontoptions: Ligatures=TeX,Scale=MatchLowercase
+monofontoptions: Scale=MatchLowercase
+indent: true
+pdf-engine: lualatex
 header-includes:
-  - \usepackage{booktabs}
-  - \usepackage{siunitx}
   - \usepackage{float}
-  - \usepackage{fontspec}
-  - \usepackage{polyglossia}
-  - \setmainlanguage{russian}
-  - \setotherlanguage{english}
+  - \floatplacement{figure}{H}
+  - \usepackage{pdfpages}
+# Bibliography settings
+bibliography: bib/references.bib
+citeproc: true
+reference-section-title: Библиография
+nocite: |
+  @*
 ---
+
 # Лабораторная работа №6
 **Тема: Работа с библиографией в LaTeX** 
 
@@ -109,6 +122,18 @@ BibTeX проще для базовых нужд, biblatex лучше для с�
 
 *Рисунок 5: Новая ссылка в natbib*
 
+\newpage
+# Приложения
+
+## Результат работы с biblatex
+В данном разделе представлен скомпилированный PDF файл, демонстрирующий работу с пакетом biblatex и стилем authoryear.
+\includepdf[pages={-}, scale=0.8, frame]{biblatex-example.pdf}
+
+\newpage
+## Результат работы с natbib (новые ссылки)
+В данном разделе представлен файл, в который была добавлена новая ссылка на учебное пособие Кулябова Д.С.
+\includepdf[pages={-}, scale=0.8, frame]{natbib-new.pdf}
+
 ## Выводы
 
 В ходе лабораторной работы №6 были освоены следующие навыки:
@@ -120,3 +145,4 @@ BibTeX проще для базовых нужд, biblatex лучше для с�
 5. **Эксперименты со стилями** для разных типов цитирования.
 
 Освоение работы с библиографией в LaTeX является важным навыком для подготовки научных публикаций и отчетов, так как ссылки широко используются для представления источников в академической среде. Пакеты natbib и biblatex позволяют создавать профессиональные библиографии, соответствующие стандартам научных изданий.
+
