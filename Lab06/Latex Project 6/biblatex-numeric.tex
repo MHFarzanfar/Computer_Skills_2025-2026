@@ -1,0 +1,22 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[style=numeric]{biblatex}
+\addbibresource{learnlatex.bib}
+\usepackage{hyperref}
+\author{Mohammadhossein Farzanfar}
+\title{Lab 6: Numeric Bibliography Example with biblatex}
+
+\begin{document}
+\maketitle
+This guide is from \cite{Kulyabov2023}. The mathematics showcase is from \cite{Graham1995}, whereas there is some chemistry in \cite{Thomas2008}.
+
+Some more complex citations: \parencite{Kulyabov2023} or \textcite{Thomas2008} or possibly \citetitle{Graham1995}.
+
+\autocite[56]{Thomas2008}
+
+\autocite[See][45-48]{Graham1995}
+
+Together \cite{Kulyabov2023,Thomas2008,Graham1995}
+
+\printbibliography
+\end{document}
