@@ -1,0 +1,22 @@
+\begin{tikzpicture}
+\tikzmath{
+  function carpet(\x,\y,\s,\d) {
+    if (\d == 0) then {
+      { \fill (\x,\y) rectangle ++(\s,\s); };
+    } else {
+      \u = \s / 3;
+      for \i in {0,1,2}{
+        for \j in {0,1,2}{
+          if !(\i==1 && \j==1) then {
+            carpet(\x + \i*\u, \y + \j*\u, \u, \d-1);
+          };
+        };
+      };
+    };
+  };
+  for \k in {0,1,2,3}{
+    \px = 5 * \k;
+    carpet(\px, 0, 4, \k);
+  };
+}
+\end{tikzpicture}
